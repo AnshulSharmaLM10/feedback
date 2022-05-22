@@ -40,6 +40,8 @@ function FeedbackForm({handleAdd}) {
         handleAdd(newFeedback);
         setText('');
         setRating(null);
+        setBtnDisabled(true);
+        setVersion('btn-secondary');
     }
  }
   return (
