@@ -1,13 +1,9 @@
-import { useState } from 'react'
-
-function FeedbackItem() {
-  const [rating, setRaiting] = useState(10);
-  const [text, setText] = useState('This is feedback');
-
+function FeedbackItem({item, handleDelete}) {
   return (
     <div className='card'>
-      <div className='num'>{rating}</div>
-      <div className='text-display'>{text}</div>
+      <div className='num'>{item.rating}</div>
+      <button className='buttonx' onClick={() => handleDelete(item.id)} >x</button>
+      <div className='text-display'>{item.text}</div>
     </div>
   )
 }
